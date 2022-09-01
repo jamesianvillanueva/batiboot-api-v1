@@ -30,3 +30,9 @@ Route::get('account/my-profile', 'ProfileController@Profile') -> middleware(['va
 
 // UPDATE PROFILE 
 Route::put('account/update-profile', 'ProfileController@UpdateProfile') -> middleware(['validate-api-key', 'validate-access-token']) -> name('updateprofile');
+
+// USER MANAGEMENT
+
+# GET USERS
+
+Route::get('management/get-user-data', 'UserManagementController@User') -> middleware(['validate-api-key', 'validate-access-token']) -> name('getuserdata');
